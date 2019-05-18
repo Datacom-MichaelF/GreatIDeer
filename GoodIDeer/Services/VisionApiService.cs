@@ -14,10 +14,11 @@ namespace GoodIDeer.Services
     {
         const string subscriptionKey = "544f820e8f9f4c64b9d223feea3eba3a";
         const string endPoint = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/detect";
-        public async Task<Parent> MakeAnalysisRequest(string imageFilePath)
+        public async Task<HttpResponseMessage> MakeAnalysisRequest(string imageFilePath)
         {
             var errors = new List<string>();
             Parent responeData = new Parent();
+            var response = new HttpResponseMessage();
             try
             {
                 HttpClient client = new HttpClient();
@@ -27,7 +28,7 @@ namespace GoodIDeer.Services
                 string requestParameters = "visualFeatures=Categories,Description,Color";
                 // Assemble the URI for the REST API Call.    
                 string uri = endPoint + "?" + requestParameters;
-                HttpResponseMessage response;
+                //HttpResponseMessage response;
                 // Request body. Posts a locally stored JPEG image.    
                 byte[] byteData = GetImageAsByteArray(imageFilePath);
                 using (ByteArrayContent content = new ByteArrayContent(byteData))
@@ -40,24 +41,24 @@ namespace GoodIDeer.Services
                     response = await client.PostAsync(uri, content);
                 }
                 // Get the JSON response.    
-                var result = await response.Content.ReadAsStringAsync();
-                if (response.IsSuccessStatusCode)
-                {
-                    responeData = JsonConvert.DeserializeObject<Parent>(result, new JsonSerializerSettings
-                    {
-                        NullValueHandling = NullValueHandling.Include,
-                        Error = delegate (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs earg) {
-                            errors.Add(earg.ErrorContext.Member.ToString());
-                            earg.ErrorContext.Handled = true;
-                        }
-                    });
-                }
+                //result = await response.Content.ReadAsStringAsync();
+                //if (response.IsSuccessStatusCode)
+                //{
+                //    responeData = JsonConvert.DeserializeObject<Parent>(result, new JsonSerializerSettings
+                //    {
+                //        NullValueHandling = NullValueHandling.Include,
+                //        Error = delegate (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs earg) {
+                //            errors.Add(earg.ErrorContext.Member.ToString());
+                //            earg.ErrorContext.Handled = true;
+                //        }
+                //    });
+                //}
             }
             catch (Exception e)
             {
                 Console.WriteLine("\n" + e.Message);
             }
-            return responeData;
+            return response;
         }
         static byte[] GetImageAsByteArray(string imageFilePath)
         {
