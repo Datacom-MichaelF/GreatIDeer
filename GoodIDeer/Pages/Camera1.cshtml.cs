@@ -9,7 +9,7 @@ namespace GoodIDeer.Pages
     {
         public async Task OnGet()
         {
-            string imageFilePath = @"C:\Work\Other\GoodDeer\GoodIDeer\images\deer01.jpg";
+            string imageFilePath = @"C:\Work\Other\GoodDeer\GoodIDeer\wwwroot\images\deer01.jpg";
 
             VisionApiService MakeAnalysis = new VisionApiService();
             /*var respose =*/

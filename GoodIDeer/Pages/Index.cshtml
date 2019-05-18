@@ -3,7 +3,8 @@
 @{
     ViewData["Title"] = "Home page";
 
-    var objects = new List<string>();
+    var objects = new List<string>
+    ();
 
 
 }
@@ -11,43 +12,52 @@
 <div class="container-fluid">
     <h2 class="h2">Dashboard</h2>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-9">
             <h4>Raukumara Map</h4>
             <div class="text-center">
-                <img src="https://maps.googleapis.com/maps/api/staticmap?center=RaukumaraForestPark&zoom=10.8&size=1000x700&scale=1.2&markers=size:tiny%7Clabel:Camera1%7C-37.9752,177.9447&markers=size:tiny%7Clabel:Camera1%7C-37.9300,177.8895&markers=size:tiny%7Clabel:Camera1%7C-37.8794,178.0373&markers=size:tiny%7Clabel:Camera1%7C-37.6899,178.2055&maptype=roadmap&key=AIzaSyBAQe_5MKstfeuWU1wnb-ar1ngVzVKDHQs" />
+                <img width="800" height="660" src="https://maps.googleapis.com/maps/api/staticmap?center=RaukumaraForestPark&zoom=10.8&size=1000x700&scale=1.2&markers=size:tiny%7Clabel:Camera1%7C-37.9752,177.9447&markers=size:tiny%7Clabel:Camera1%7C-37.9300,177.8895&markers=size:tiny%7Clabel:Camera1%7C-37.8794,178.0373&markers=size:tiny%7Clabel:Camera1%7C-37.6899,178.2055&maptype=roadmap&key=AIzaSyBAQe_5MKstfeuWU1wnb-ar1ngVzVKDHQs" />
             </div>
         </div>
-        <div class="col-md-4">
-            <h4>Latest Forest Images</h4>
+        <div class="col-md-3">
+            <h4>Latest Images</h4>
             <table>
                 <tr>
                     <td>
-                        <img src="~/images/deer01.jpg" width="150" height="150" class="rounded" />
-                        <br />
-                        <span>Location: </span><a class="nav-link" href="/camera1">
-                            <span data-feather="file-text"></span>
-                            Camera 01
-                        </a>
+                        <div style="margin: 10px 10px 10px 10px;">
+                            <a class="nav-link" href="/camera1">
+                                <img src="~/images/deer01.jpg" width="150" height="150" class="rounded" />
+                                <br />
+                                <span>Location: </span>
+                                <span data-feather="file-text"></span>
+                                Camera 01
+                            </a>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="~/images/deer02.jpg" width="150" height="150" class="rounded" />
-                        <br />
-                        <span>Location: </span><a class="nav-link" href="/camera3">
-                            <span data-feather="file-text"></span>
-                            Camera 03
-                        </a>
+                        <div style="margin: 10px 10px 10px 10px;">
+                            <a class="nav-link" href="/camera3">
+                                <img src="~/images/Understory.jpg" width="150" height="150" class="rounded" />
+                                <br />
+                                <span>Location: </span>
+                                <span data-feather="file-text"></span>
+                                Camera 03
+                            </a>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="~/images/deer03.jpg" width="150" height="150" class="rounded" />
-                        <br />
-                        <span>Location: </span><a class="nav-link" href="/camera2">
-                            <span data-feather="file-text"></span>
-                            Camera 02
-                        </a>
+                        <div style="margin: 10px 10px 10px 10px;">
+                            <a class="nav-link" href="/camera2">
+                                <img src="~/images/full_ga3.jpg" width="150" height="150" class="rounded" />
+                                <br />
+                                <span>Location: </span>
+                                <span data-feather="file-text"></span>
+                                Camera 02
+                            </a>
+                        </div>
                     </td>
                 </tr>
 
