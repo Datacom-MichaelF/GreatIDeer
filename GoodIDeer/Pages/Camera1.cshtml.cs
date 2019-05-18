@@ -13,15 +13,20 @@ namespace GoodIDeer.Pages
     {
         public int DeerCount { get; set; }
         public int AnimalCount { get; set; }
+        public int ImageCount { get; set; }
         
         public async Task OnGet()
         {
             var imagePaths = new List<string>
             {
-                @"C:\Users\MichaelFo\Downloads\Deer.jpg",
-                @"C:\Users\MichaelFo\source\repos\GoodIDeer\GoodIDeer\wwwroot\images\deer01.jpg",
-                @"C:\Users\MichaelFo\source\repos\GoodIDeer\GoodIDeer\wwwroot\images\deer02.jpg"
+                @"C:\Users\MichaelFo\Downloads\Understory.jpg"
+                //@"C:\Users\MichaelFo\source\repos\GoodIDeer\GoodIDeer\wwwroot\images\Understory.jpg",
+                //@"C:\Users\MichaelFo\source\repos\GoodIDeer\GoodIDeer\wwwroot\images\forest1.jpg",
+                //@"C:\Users\MichaelFo\source\repos\GoodIDeer\GoodIDeer\wwwroot\images\deerInForest.jpg",
+                //@"C:\Users\MichaelFo\source\repos\GoodIDeer\GoodIDeer\wwwroot\images\pigInForest.jpg"
             };
+
+            ImageCount = imagePaths.Count();
 
             //string imageFilePath = @"C:\Users\MichaelFo\Downloads\Deer.jpg";
 
@@ -33,6 +38,11 @@ namespace GoodIDeer.Pages
 
                 var content = await response.Content.ReadAsStringAsync();
                 var json = JsonConvert.DeserializeObject<Model.RootObject>(content);
+
+                if (json.objects[0] == null)
+                {
+                    return;
+                }
 
                 if (json.objects[0].@object == "Deer" && json.objects[0].confidence > 0.7)
                 {
