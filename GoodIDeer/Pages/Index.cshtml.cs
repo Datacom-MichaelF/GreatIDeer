@@ -7,10 +7,12 @@ namespace GoodIDeer.Pages
 {
     public class IndexModel : PageModel
     {
+
         public void OnGet()
         {
-            
+
         }
+
 
         public void processImage()
         {
