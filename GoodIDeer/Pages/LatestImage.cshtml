@@ -1,0 +1,60 @@
+﻿@page
+@model GoodIDeer.Pages.LatestImageModel
+@{
+    ViewData["Title"] = "LatestImage";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <h4>Latest Images</h4>
+        <table>
+            <tr>
+                <td>
+                    <div style="margin: 10px 10px 10px 10px;">
+                        <a class="nav-link" href="/camera1">
+                            <img src="~/images/deer01.jpg" width="200" height="200" class="rounded" />
+                            <br />
+                            <span>Location: </span>
+                            <span data-feather="file-text"></span>
+                            Camera 01
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div style="margin: 10px 10px 10px 10px;">
+                        <a class="nav-link" href="/camera2">
+                            <img src="~/images/deer02.jpg" width="200" height="200" class="rounded" />
+                            <br />
+                            <span>Location: </span>
+                            <span data-feather="file-text"></span>
+                            Camera 02
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div style="margin: 10px 10px 10px 10px;">
+                        <a class="nav-link" href="/camera3">
+                            <img src="~/images/Understory.jpg" width="200" height="200" class="rounded" />
+                            <br />
+                            <span>Location: </span>
+                            <span data-feather="file-text"></span>
+                            Camera 03
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div style="margin: 10px 10px 10px 10px;">
+                        <a class="nav-link" href="/camera4">
+                            <img src="~/images/full_ga3.jpg" width="200" height="200" class="rounded" />
+                            <br />
+                            <span>Location: </span>
+                            <span data-feather="file-text"></span>
+                            Camera 04
+                        </a>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+

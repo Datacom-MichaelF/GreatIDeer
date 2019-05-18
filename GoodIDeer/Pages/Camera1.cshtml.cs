@@ -23,8 +23,6 @@ namespace GoodIDeer.Pages
                 @"C:\Users\MichaelFo\source\repos\GoodIDeer\GoodIDeer\wwwroot\images\deer02.jpg"
             };
 
-            //string imageFilePath = @"C:\Users\MichaelFo\Downloads\Deer.jpg";
-
             VisionApiService MakeAnalysis = new VisionApiService();
 
             foreach(var image in imagePaths)

@@ -3,30 +3,69 @@
 @{
     ViewData["Title"] = "Camera1 page";
 
-    //var imageUrls = new List<;
+    //var imageUrls = new List<; }
 }
 
-<h1>
-    Viewing the images from Camera 1
-</h1>
+<div class="container">
+    <h1>
+        Viewing the images from Camera 1
+    </h1>
+
+    <table>
+        <tr>
+            <td>
+                <div style="width: 750px; margin-left: 140px;">
+                    <!-- Expanded image -->
+                    <img id="expandedImg" style="width:50%">
+
+                    <!-- Image text -->
+                    <div id="imgtext"></div>
+                </div>
+            </td>
+            <td>
+                <div class="row" style="width: 300px">
+                    <div class="column" style="margin: 10px 10px 10px 10px;">
+                        <img src="~/images/deer01.jpg" width="140" height="140" alt="Nature" onclick="myFunction(this);">
+                        <p>Date: 19/05/2019</p>
+
+                    </div>
+                    <div class="column" style="margin: 10px 10px 10px 10px;">
+                        <img src="~/images/Understory.jpg" width="140" height="140" alt="Snow" onclick="myFunction(this);">
+                        <p>Date: 19/05/2019</p>
+                    </div>
+                    <div class="column" style="margin: 10px 10px 10px 10px;">
+                        <img src="~/images/deer03.jpg" width="140" height="140" alt="Mountains" onclick="myFunction(this);">
+                        <p>Date: 19/05/2019</p>
+                    </div>
+                    <div class="column" style="margin: 10px 10px 10px 10px;">
+                        <img src="~/images/full_ga3.jpg" width="140" height="140" alt="Lights" onclick="myFunction(this);">
+                        <p>Date: 19/05/2019</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
 
 <p>
     Animal Count: @Model.AnimalCount
     Deer Count: @Model.DeerCount
 </p>
 
-<div class="text-center">
-    <img src="~/images/Understory.jpg" height="500" width="600"/>
 </div>
 
-<div class="wrapper">
-    <div class="panel">
-        <img src="~/images/Understory.jpg" height="200" width="200" />
-    </div>
-    <div class="panel">
-        <img src="~/images/Understory.jpg" height="200" width="200" />
-    </div>
-    <div class="panel">
-        <img src="~/images/Understory.jpg" height="200" width="200" />
-    </div>
-</div>
+
+
+<script>
+    function myFunction(imgs) {
+        // Get the expanded image
+        var expandImg = document.getElementById("expandedImg");
+        // Get the image text
+        var imgText = document.getElementById("imgtext");
+        // Use the same src in the expanded image as the image being clicked on from the grid
+        expandImg.src = imgs.src;
+        // Use the value of the alt attribute of the clickable image as text inside the expanded image
+        imgText.innerHTML = imgs.alt;
+        // Show the container element (hidden with CSS)
+        expandImg.parentElement.style.display = "block";
+    }
+</script>
