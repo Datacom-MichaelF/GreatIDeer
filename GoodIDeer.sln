@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodIDeer", "GoodIDeer\GoodIDeer.csproj", "{A3634124-8D64-48D5-980B-56DF71C5906B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3634124-8D64-48D5-980B-56DF71C5906B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3634124-8D64-48D5-980B-56DF71C5906B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3634124-8D64-48D5-980B-56DF71C5906B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3634124-8D64-48D5-980B-56DF71C5906B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0866DFF7-CBB0-467F-868C-F0BFA7D4B1CE}
+	EndGlobalSection
+EndGlobal
