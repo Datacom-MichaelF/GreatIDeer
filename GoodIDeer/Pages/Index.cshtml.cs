@@ -15,18 +15,19 @@ namespace GoodIDeer.Pages
 
         public string Response { get; set; }
 
-        public void OnGet()
+        public async Task OnGet()
         {
             string imageFilePath = @"C:\Users\MichaelFo\Downloads\Deer.jpg";
 
             VisionApiService MakeAnalysis = new VisionApiService();
             /*var respose =*/
-            var response = MakeAnalysis.MakeAnalysisRequest(imageFilePath);
+            var response = await MakeAnalysis.MakeAnalysisRequest(imageFilePath);
 
-            var content = response.Result.Content.ReadAsStringAsync();
-            //var thing = JsonConvert.DeserializeObject(content.ToString());
+            var content = await response.Content.ReadAsStringAsync();
+            var thing = JsonConvert.DeserializeObject<Model.RootObject>(content);
+            //Response = thing;
 
-            Response = content.Result.ToString();
+//            Response = "";// content.Result.ToString();
         }
 
         public void btnclick_Click()

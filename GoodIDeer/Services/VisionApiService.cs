@@ -10,6 +10,50 @@ using System.Threading.Tasks;
 
 namespace GoodIDeer.Services
 {
+    public class Rectangle
+    {
+        public int x { get; set; }
+        public int y { get; set; }
+        public int w { get; set; }
+        public int h { get; set; }
+    }
+
+    public class Parent2
+    {
+        public string @object { get; set; }
+        public double confidence { get; set; }
+    }
+
+    public class Parent
+    {
+        public string @object { get; set; }
+        public double confidence { get; set; }
+        public Parent2 parent { get; set; }
+    }
+
+    public class Object
+    {
+        public Rectangle rectangle { get; set; }
+        public string @object { get; set; }
+        public double confidence { get; set; }
+        public Parent parent { get; set; }
+    }
+
+    public class Metadata
+    {
+        public int width { get; set; }
+        public int height { get; set; }
+        public string format { get; set; }
+    }
+
+    public class RootObject
+    {
+        public List<Object> objects { get; set; }
+        public string requestId { get; set; }
+        public Metadata metadata { get; set; }
+    }
+
+
     public class VisionApiService
     {
         const string subscriptionKey = "544f820e8f9f4c64b9d223feea3eba3a";
@@ -39,6 +83,7 @@ namespace GoodIDeer.Services
                     content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
                     // Make the REST API call.    
                     response = await client.PostAsync(uri, content);
+                    
                 }
                 // Get the JSON response.    
                 //result = await response.Content.ReadAsStringAsync();
