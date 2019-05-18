@@ -1,9 +1,6 @@
-﻿using GoodIDeer.Model;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -61,7 +58,6 @@ namespace GoodIDeer.Services
         public async Task<HttpResponseMessage> MakeAnalysisRequest(string imageFilePath)
         {
             var errors = new List<string>();
-            Parent responeData = new Parent();
             var response = new HttpResponseMessage();
             try
             {

@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GoodIDeer.Model;
-using GoodIDeer.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using GoodIDeer.Services;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Newtonsoft.Json;
 
 namespace GoodIDeer.Pages
 {
@@ -17,7 +10,7 @@ namespace GoodIDeer.Pages
 
         public async Task OnGet()
         {
-            string imageFilePath = @"C:\Users\MichaelFo\Downloads\Deer.jpg";
+            string imageFilePath = @"C:\Work\Other\GoodDeer\GoodIDeer\images\deer01.jpg";
 
             VisionApiService MakeAnalysis = new VisionApiService();
             /*var respose =*/
@@ -25,12 +18,10 @@ namespace GoodIDeer.Pages
 
             var content = await response.Content.ReadAsStringAsync();
             var thing = JsonConvert.DeserializeObject<Model.RootObject>(content);
-            //Response = thing;
-
-//            Response = "";// content.Result.ToString();
+            Response = thing;
         }
 
-        public void btnclick_Click()
+        public void processImage()
         {
 
         }

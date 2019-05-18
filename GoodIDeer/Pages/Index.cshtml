@@ -16,52 +16,42 @@
             <div class="text-center">
                 <img src="https://maps.googleapis.com/maps/api/staticmap?center=RaukumaraForestPark&zoom=10.8&size=1000x700&scale=1.2&markers=size:tiny%7Clabel:Camera1%7C-37.9752,177.9447&markers=size:tiny%7Clabel:Camera1%7C-37.9300,177.8895&markers=size:tiny%7Clabel:Camera1%7C-37.8794,178.0373&markers=size:tiny%7Clabel:Camera1%7C-37.6899,178.2055&maptype=roadmap&key=AIzaSyBAQe_5MKstfeuWU1wnb-ar1ngVzVKDHQs" />
             </div>
-
-            <table class="table">
-                <caption>Top 5 Marae </caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Points</th>
-                        <th scope="col">Rank</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Marae 1</td>
-                        <td>96</td>
-                        <td>01</td>
-                    </tr>
-                    <tr>
-                        <td>Marae 2</td>
-                        <td>90</td>
-                        <td>02</td>
-                    </tr>
-                    <tr>
-                        <td>Marae 3</td>
-                        <td>80</td>
-                        <td>03</td>
-                    </tr>
-                    <tr>
-                        <td>Marae 4</td>
-                        <td>70</td>
-                        <td>04</td>
-                    </tr>
-                    <tr>
-                        <td>Marae 5</td>
-                        <td>70</td>
-                        <td>05</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
         <div class="col-md-4">
             <h4>Latest Forest Images</h4>
-            <img src="~/images/deer03.jpg" alt="deer 01" width="200" height="200" class="rounded" />
-            <img src="~/images/deer01.jpg" alt="deer 01" width="200" height="200" class="rounded" />
-            <img src="~/images/deer02.jpg" alt="deer 01" width="200" height="200" class="rounded" />
+            <table>
+                <tr>
+                    <td>
+                        <img src="~/images/deer01.jpg" width="250" height="250" class="rounded" />
+                        <br />
+                        <span>Location: </span><a class="nav-link" href="/camera1">
+                            <span data-feather="file-text"></span>
+                            Camera 01
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="~/images/deer02.jpg" width="250" height="250" class="rounded" />
+                        <br />
+                        <span>Location: </span><a class="nav-link" href="/camera3">
+                            <span data-feather="file-text"></span>
+                            Camera 03
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="~/images/deer03.jpg" width="250" height="250" class="rounded" />
+                        <br />
+                        <span>Location: </span><a class="nav-link" href="/camera2">
+                            <span data-feather="file-text"></span>
+                            Camera 02
+                        </a>
+                    </td>
+                </tr>
 
-            <asp:Button ID="btnclick" runat="server" Text="Click Here" onclick="btnclick_Click()" />
+            </table>
         </div>
     </div>
 </div>
