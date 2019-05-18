@@ -20,52 +20,53 @@
     <div class="container-fluid">
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white" style="background-color: black; margin-bottom:0px !important;">
-                <div class="container">
-                    <div class="navbar-header">
-                        <a asp-page="/Index" class="navbar-brand col-sm-3 col-md-2 mr-0" style="width: 400px; color:white;">Raukumara Vine</a>
-                    </div>
-                    <div class="navbar-collapse collapse" style="color:white;">
-                        <span class="navbar-text">
-                            Number of deer idetified : 10
-                        </span>
-                        <span class="navbar-text">
-                            Number of killed deer: 00
-                        </span>
-                    </div>
+                <div class="navbar-header" style="margin-left: 30px;">
+
+                    <a asp-page="/Index">
+                        <img src="~/images/logo_web_transparent.png">
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse" style="color:white;">
+                    <span class="navbar-text">
+                        Total Deer Count : 10
+                    </span>
+                    <span class="navbar-text">
+                        Killed Count: 00
+                    </span>
                 </div>
             </nav>
 
-            <nav class="col-md-2 col-2 d-none d-md-block navbar-light sidebar" style="background-color: #f8f9fa !important;">
+            <nav class="col-md-2 col-2 d-none d-md-block navbar-light sidebar" style="background-color: black !important; min-height: calc(100vh - 50px) !important;">
                 <div class="sidebar-sticky" style="margin-top: 10px; margin-left: 20px;">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="/Index">
+                            <a class="nav-link active" style="color:white;" href="/Index">
                                 <span data-feather="home"></span>
-                                Dashboard <span class="sr-only">(current)</span>
+                                Detection Map <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" style="color:white;" href="#">
                                 <span data-feather="file"></span>
-                                Deer Map
+                                Latest Images
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Protect Forest
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Forest Camera Images
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/MaraeChallenge">
+                            <a class="nav-link" style="color:white;" href="/MaraeChallenge">
                                 <span data-feather="file-text"></span>
                                 Marae Challenge
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:white;" href="#">
+                                <span data-feather="file-text"></span>
+                                Our Forest
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color:white;" href="#">
+                                <span data-feather="file-text"></span>
+                                About US
                             </a>
                         </li>
                     </ul>
@@ -78,19 +79,19 @@
                     </h6>
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" style="color:white;" href="#">
                                 <span data-feather="file-text"></span>
                                 Hunting Guidances
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" style="color:white;" href="#">
                                 <span data-feather="file-text"></span>
-                                Firearms
+                                Fire Arms Info
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" style="color:white;" href="#">
                                 <span data-feather="file-text"></span>
                                 Hunting Dates
                             </a>
